@@ -1,11 +1,80 @@
 <div ng-controller="IndexController">
-  <super-navbar>
-    <super-navbar-title>
-		PatientNote
-    </super-navbar-title>
+  	<super-navbar>
+    	<super-navbar-title>
+			PatientNote
+    	</super-navbar-title>
     
 <!--    <super-navbar-button class="item-icon-left" side="left" onClick="supersonic.ui.drawers.open('left')">
      ooo
     </super-navbar-button> -->
-  </super-navbar>
+  	</super-navbar>
+
+	<form name="newPatientNote" novalidate>
+
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Doctor: </span>
+			<input placeholder="Only fill in if known." type="text" id="doctor"/>
+		</label>
+		
+		<label class="item item-input item-select">
+    		<div class="input-label">
+    			Symptom
+    		</div>
+    		<select>
+    	  		<option selected>New Recent Injury</option>
+    	  		<option>Discomfort/Pain</option>
+    	  		<option>Chills/Fever</option>
+    	  		<option>Breathing/Cough/Speech/Respiratory</option>
+    	  		<option>Difficulty Using Senses</option>
+    	  		<option>Movement Difficulty</option>
+    	  		<option>Visible Growth/Lesion/Bump</option>
+    	  		<option>Stomach/Intestinal Difficulty</option>
+    	  		<option>Urination Difficulty/Discomfort</option>
+		  		<option>Menstrual/Pregnancy Concerns</option>
+    	  		<option>Sexual Organs/Concerns</option>
+	      		<option>Not Listed: Describe in Notes</option>
+	    	</select>
+		</label>
+		
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Symptom Notes: </span>
+			<input placeholder="" type="text" id="symptomNote"/>
+		</label>
+	
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">When did this first start? </span>
+			<input placeholder="" type="text" id="firstStart"/>
+		</label>
+		
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">What makes it better? </span>
+			<input placeholder="" type="text" id="makesBetter"/>
+		</label>
+	
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">What makes it worse? </span>
+			<input placeholder="" type="text" id="makesWorse"/>
+		</label>
+		
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Where do the symptoms start and where do they end? </span>
+			<input placeholder="" type="text" id="symptomStartEnd"/>
+		</label>
+		
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Doing what do you most notice your difficulty? </span>
+			<input placeholder="" type="text" id="noticeDifficulty"/>
+		</label>
+		
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Email to send to: </span>
+			<input placeholder="minuteclinic@gmail.com" type="text" id="sendEmail"/>
+		</label>
+
+		<div class="button-bar"  width=400 height=500>
+	    	<button ng-click="submitForm()" class="button icon-left button-assertive">
+	        	Send Note! 
+	    	</button>
+	  	</div>
+	</form>
 </div>
