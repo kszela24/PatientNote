@@ -1,0 +1,1 @@
+var PatientNote = angular.module('PatientNote', ['common']);
